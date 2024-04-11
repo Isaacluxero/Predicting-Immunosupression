@@ -10,18 +10,35 @@ The project utilizes data from The National Health Interview Survey (NHIS) for 2
 
 ## Analytical Models
 
-The project explores several classification models to predict immunosuppression, including logistic regression, decision tree classifier (DTC), random forest, and gradient boosting. Performance metrics such as accuracy and true positive rate (TPR) were used for model evaluation.
+The project explores several classification models to predict immunosuppression:
 
-The DTC model emerged as the best performer, striking a balance between accuracy and TPR, making it suitable for medical applications where minimizing false negatives is critical.
+1. **Baseline Model**: Predicts the majority value of the dependent variable.
+2. **Logistic Regression**: Utilizes logistic function to predict probabilities of immunosuppression.
+3. **Linear Discriminant Analysis (LDA)**: Uses linear combinations of features to classify.
+4. **Decision Tree Classifier (DTC)**: Creates a tree structure for classification.
+5. **Random Forest**: Ensemble of decision trees for improved accuracy.
+6. **Gradient Boosting**: Builds models sequentially to correct errors of previous models.
+7. **Vanilla Bagging**: Ensemble method using bootstrap samples.
+
+Performance metrics such as accuracy, true positive rate (TPR), false negative rate (FNR), and cross-validation were used for model evaluation and selection. The DTC model was chosen as the best performer due to its balanced accuracy and TPR, crucial for medical applications.
 
 ## Impact
 
-The project's impact includes improved identification of immunosuppressed individuals, leading to better healthcare management and preparedness for pandemics. Future extensions may involve incorporating additional data sources and exploring advanced modeling techniques.
+The project's impact extends to various areas:
 
-## References & Appendices
+1. **Healthcare Management**: Improved identification of immunosuppressed individuals leads to better care and monitoring by healthcare providers.
+2. **Pandemic Preparedness**: Early identification of high-risk individuals aids in targeted interventions during pandemics, reducing transmission and mortality rates.
+3. **Research and Development**: Insights from predictive modeling contribute to the development of new treatments and therapies for immunosuppression.
+4. **Public Health Awareness**: Increased awareness and understanding of immunosuppression promote proactive health measures and education among the general population.
 
-- [Dataset and Variable Summary](https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NHIS/2021/adultinc21csv.zip)
-- [Google Colab Notebook](https://colab.research.google.com/drive/1QRub_B-1m0QBm3VtrnNlhOQtfSCCIJ-L?usp=sharing)
-- [Appendix A: Ccp_alpha vs. Mean Validation TPR with CV on DTC](#)
-- [Appendix B: Decision Tree Associated with DTC Model](#)
-- [Appendix C: Accuracy and TPR Values for Different Threshold Values in Logistic Regression](#)
+## References
+
+- [National Health Interview Survey (NHIS) Data](https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/NHIS/2021/adultinc21csv.zip)
+- [NHIS Dataset Documentation](https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Dataset_Documentation/NHIS/2021/adult-summary.pdf)
+  
+## Appendices
+
+- [Appendix A: Ccp_alpha vs. Mean Validation TPR with CV on DTC]()
+- [Appendix B: Decision Tree Associated with DTC Model]()
+- [Appendix C: Accuracy and TPR Values for Different Threshold Values in Logistic Regression]()
+
